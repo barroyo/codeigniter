@@ -50,7 +50,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 
-
+$route['user/view/(\d{3,})'] = 'user/show/$1/id';
+$route['user/view/(:num)'] = 'user/show/$1/id';
+$route['user/view/(:any)'] = 'user/show/$1/name';
 $route['login'] = 'user/login';
 $route['register'] = 'user/register';
 $route['default_controller'] = 'user/login';
